@@ -9,10 +9,10 @@ type Props = {
 export default function MetricCard({ label, value, hint }: Props) {
   return (
     <Card>
-      <div className="metric-card">
-        <div className="metric-card__label">{label}</div>
-        <div className="metric-card__value">{value}</div>
-        {hint ? <div className="metric-card__hint">{hint}</div> : null}
+      <div>
+        <div className="text-sm text-muted">{label}</div>
+        <div className="mt-1 text-3xl font-bold text-slate-900">{value}</div>
+        {hint ? <div className="mt-1.5 text-xs text-slate-400">{hint}</div> : null}
       </div>
     </Card>
   );

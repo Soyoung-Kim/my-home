@@ -10,9 +10,12 @@ export default function UserDetailPage() {
 
   if (!user) {
     return (
-      <div className="page">
+      <div className="mx-auto max-w-[1200px]">
         <PageHeader title="사용자 없음" />
-        <Link to="/users" className="link">
+        <Link
+          to="/users"
+          className="text-[var(--color-primary)] no-underline hover:underline"
+        >
           목록으로
         </Link>
       </div>
@@ -20,12 +23,15 @@ export default function UserDetailPage() {
   }
 
   return (
-    <div className="page">
+    <div className="mx-auto max-w-[1200px]">
       <PageHeader
         title={user.name}
         description={user.email}
         actions={
-          <Link to="/users" className="link">
+          <Link
+            to="/users"
+            className="text-[var(--color-primary)] no-underline hover:underline"
+          >
             목록
           </Link>
         }

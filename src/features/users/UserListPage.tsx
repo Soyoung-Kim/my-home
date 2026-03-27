@@ -29,7 +29,10 @@ const columns: Column<User>[] = [
     key: 'actions',
     header: '',
     render: (u) => (
-      <Link to={`/users/${u.id}`} className="link">
+      <Link
+        to={`/users/${u.id}`}
+        className="text-[var(--color-primary)] no-underline hover:underline"
+      >
         상세
       </Link>
     ),
@@ -38,7 +41,7 @@ const columns: Column<User>[] = [
 
 export default function UserListPage() {
   return (
-    <div className="page">
+    <div className="mx-auto max-w-[1200px]">
       <PageHeader title="사용자" description="계정 목록" />
       <DataTable columns={columns} rows={users} rowKey={(u) => u.id} />
     </div>

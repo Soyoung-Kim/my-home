@@ -24,7 +24,7 @@ const items: TimelineItem[] = [
 
 export default function AuditLogsPage() {
   return (
-    <div className="page">
+    <div className="mx-auto max-w-[1200px]">
       <PageHeader title="감사 로그" description="최근 활동" />
       <Timeline items={items} />
     </div>

@@ -11,7 +11,10 @@ const columns: Column<RoleGroup>[] = [
     key: 'actions',
     header: '',
     render: (g) => (
-      <Link to={`/role-groups/${g.id}`} className="link">
+      <Link
+        to={`/role-groups/${g.id}`}
+        className="text-[var(--color-primary)] no-underline hover:underline"
+      >
         상세
       </Link>
     ),
@@ -20,7 +23,7 @@ const columns: Column<RoleGroup>[] = [
 
 export default function RoleGroupListPage() {
   return (
-    <div className="page">
+    <div className="mx-auto max-w-[1200px]">
       <PageHeader title="역할 그룹" description="권한 묶음" />
       <DataTable columns={columns} rows={roleGroups} rowKey={(g) => g.id} />
     </div>

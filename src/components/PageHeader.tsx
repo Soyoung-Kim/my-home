@@ -8,14 +8,12 @@ type Props = {
 
 export default function PageHeader({ title, description, actions }: Props) {
   return (
-    <div className="page-header">
+    <div className="mb-5 flex flex-wrap items-start justify-between gap-4">
       <div>
-        <h2 className="page-header__title">{title}</h2>
-        {description ? (
-          <p className="page-header__desc">{description}</p>
-        ) : null}
+        <h2 className="mb-1 mt-0 text-2xl font-semibold text-slate-900">{title}</h2>
+        {description ? <p className="m-0 text-sm text-muted">{description}</p> : null}
       </div>
-      {actions ? <div className="page-header__actions">{actions}</div> : null}
+      {actions ? <div className="shrink-0">{actions}</div> : null}
     </div>
   );
 }

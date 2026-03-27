@@ -1,0 +1,15 @@
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-muted {
+  color: #64748b;
+}
+
+.card-base {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: white;
+}

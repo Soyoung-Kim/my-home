@@ -10,7 +10,7 @@ const columns: Column<ProjectAccess>[] = [
 
 export default function ProjectPermissionsPage() {
   return (
-    <div className="page">
+    <div className="mx-auto max-w-[1200px]">
       <PageHeader
         title="프로젝트 권한"
         description="프로젝트별 역할 그룹 매핑"

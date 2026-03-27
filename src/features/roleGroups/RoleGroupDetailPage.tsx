@@ -10,9 +10,12 @@ export default function RoleGroupDetailPage() {
 
   if (!group) {
     return (
-      <div className="page">
+      <div className="mx-auto max-w-[1200px]">
         <PageHeader title="그룹 없음" />
-        <Link to="/role-groups" className="link">
+        <Link
+          to="/role-groups"
+          className="text-[var(--color-primary)] no-underline hover:underline"
+        >
           목록으로
         </Link>
       </div>
@@ -20,12 +23,15 @@ export default function RoleGroupDetailPage() {
   }
 
   return (
-    <div className="page">
+    <div className="mx-auto max-w-[1200px]">
       <PageHeader
         title={group.name}
         description={`멤버 ${group.memberCount}명`}
         actions={
-          <Link to="/role-groups" className="link">
+          <Link
+            to="/role-groups"
+            className="text-[var(--color-primary)] no-underline hover:underline"
+          >
             목록
           </Link>
         }
